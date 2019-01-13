@@ -29,11 +29,12 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <script src="{{asset('assets/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -46,31 +47,37 @@
             </div>
 
             <ul class="nav">
-                <li>
+                <li id="dashboard">
                     <a href="{{asset('dasboard')}}">
                         <i class="pe-7s-graph"></i>
                         <p>Relatórios</p>
                     </a>
                 </li>
-                <li class="active">
+                <li id="entrada">
                     <a href="{{asset('/')}}">
                         <i class="pe-7s-user"></i>
                         <p>Entrada</p>
                     </a>
                 </li>
-                <li>
+                <li id="saida">
+                    <a href="{{asset('/saida')}}">
+                        <i class="pe-7s-user"></i>
+                        <p>Saída</p>
+                    </a>
+                </li>
+                <li id="funcionario">
                     <a href="{{asset('funcionarios')}}">
                         <i class="pe-7s-note2"></i>
                         <p>Funcionarios</p>
                     </a>
                 </li>
-                <li>
+                <li id="produtos">
                     <a href="{{asset('produtos')}}">
                         <i class="pe-7s-news-paper"></i>
                         <p>Produtos</p>
                     </a>
                 </li>
-                <li>
+                <li id="servicos">
                     <a href="{{asset('servicos')}}">
                         <i class="pe-7s-science"></i>
                         <p>Serviços</p>
@@ -165,7 +172,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <p>Log out</p>
+                                <p>Sair</p>
                             </a>
                         </li>
 						<li class="separator hidden-lg hidden-md"></li>
@@ -183,17 +190,17 @@
                     <ul>
                         <li>
                             <a href="#">
-                                Home
+                                Inicio
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Company
+                                Empresa
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Portfolio
+                                Portfólio
                             </a>
                         </li>
                         <li>
@@ -204,7 +211,7 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="#">Osvaldir Junior</a>, Desenvolvedor Web
                 </p>
             </div>
         </footer>
@@ -216,22 +223,23 @@
 </body>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="{{asset('assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
 	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+	<script src="{{asset('assets/js/chartist.min.js')}}"></script>
 
     <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
+    <script src="{{asset('assets/js/bootstrap-notify.js')}}"></script>
 
     <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+	<script src="{{asset('assets/js/light-bootstrap-dashboard.js?v=1.4.0')}}"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
+    <script src="{{asset('assets/js/demo.js')}}"></script>
+    <script src="{{asset('js/menu.js')}}"></script>
 
 </html>

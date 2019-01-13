@@ -128,6 +128,6 @@
 
         <script type="text/javascript">
     	$(document).ready(function(){
-            changeMenu('entrada');});
+            changeMenu('servicos');});
         </script>
 @endsection
